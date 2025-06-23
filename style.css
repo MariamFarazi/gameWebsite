@@ -1,0 +1,619 @@
+/*------ Google Fonts Poppins ------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*------color root css style -------*/
+:root {
+    --color-1: #0e1b10;
+    --color-2: #fff;
+    --color-3: #07080e;
+    --color-4: rgb(255, 255, 255, .5);
+    --color-5: greenyellow;
+}
+
+/* common css style start */
+body {
+    width: 100%;
+    height: 100vh;
+    background: #07080e;
+    font-family: 'Poppins', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    width: 85%;
+    height: 95%;
+    box-shadow: 0px 0px 20px rgb(47, 241, 21);
+    border-radius: 10px;
+    display: flex;
+}
+
+header aside,
+article {
+    width: 85%;
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+    background: var(--color-3);
+}
+
+
+
+header aside {
+    width: 15%;
+    border-radius: 10px 0px 0px 10px;
+    background: #1af31a;
+}
+
+header aside h1 {
+    width: 100%;
+    color: #2e2e2e;
+    text-align: center;
+    display: flex;
+    padding: 14px 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+header aside i {
+    padding: 0px 4px;
+}
+
+header aside button {
+    background: #000000;
+    text-align: center;
+    color: #1af31a;
+    margin: 0px 16px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    font-weight: 700;
+    transition: .3s linear;
+}
+
+header aside button:hover {
+    background: #013309;
+}
+
+header aside ul {
+    list-style: none;
+    position: relative;
+    padding: 14px 0px 16px 14px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header aside ul li {
+    padding-bottom: 10px;
+}
+
+header aside ul .active_li {
+    color: #013309;
+    border-right: 3px solid #013309;
+}
+
+header aside ul::before {
+    content: '';
+    width: 84%;
+    position: absolute;
+    height: 2px;
+    background: #013309;
+    bottom: 0;
+
+}
+
+header aside ul li {
+    transition: .3s linear;
+}
+
+header aside ul li:hover {
+    opacity: .8;
+}
+
+header aside ul li a {
+    text-decoration: none;
+    color: #013504;
+}
+
+header aside ul li a i {
+    font-size: 20px;
+    padding-right: 8px;
+    color: #013504;
+}
+
+
+/*----- subcriptions box css style start ------*/
+header aside .subcriptions {
+    width: 99%;
+    height: auto;
+    /* border: 1px solid #fff; */
+    margin-top: 10px;
+    margin-left: 6%;
+}
+
+header aside .subcriptions h4 {
+    font-size: 20px;
+    color: #013309;
+    font-weight: 600;
+}
+
+header aside .subcriptions .subcription_box {
+    width: 95%;
+    height: 290px;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+header aside .subcriptions .subcription_box::-webkit-scrollbar {
+    width: 5px;
+    background: #555756;
+    border-radius: 20px;
+    visibility: hidden;
+    transition: .3s linear;
+}
+
+header aside .subcriptions .subcription_box::-webkit-scrollbar-thumb {
+    background: rgba(2, 48, 4, 0.7);
+    border-radius: 20px;
+    visibility: hidden;
+    transition: .3s linear;
+}
+
+header aside .subcriptions .subcription_box:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+header aside .subcriptions .subcription_box:hover::-webkit-scrollbar {
+    visibility: visible;
+}
+
+header aside .subcriptions .card {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+header aside .subcriptions .card .card-img {
+    width: 35px;
+    height: 35px;
+    position: relative;
+}
+
+header aside .subcriptions .card .card-img img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+header aside .subcriptions .subcription_box .card .card-img::before {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: greenyellow;
+    border: 2px solid #013309;
+    top: 13px;
+    right: -5px;
+}
+
+header aside .subcriptions .subcription_box .card .content {
+    margin-left: 8px;
+}
+
+header aside .subcriptions .subcription_box .card .content h5 {
+    width: 125px;
+    color: #013309;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header aside .subcriptions .subcription_box .card .content p {
+    width: 100px;
+    color: #013309;
+    font-size: 10px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/*---- nav css style start -----*/
+header article nav {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    text-align: center;
+    padding: 0px 30px;
+    justify-content: space-between;
+    border-radius: 0px 10px 0px 0px;
+    align-items: center;
+    background: var(--color-1);
+    /* border-bottom: 2px solid #0e1b10; */
+    box-shadow: 0px 0px 22px 0px rgb(35, 231, 5);
+}
+
+header article nav button {
+    padding: 10px 22px;
+    background: #1af31a;
+    color: #013309;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    outline: none;
+    border-radius: 6px;
+}
+
+header article nav .search {
+    width: 40%;
+    padding: 6px 10px;
+    background: #112704;
+    transition: .5s linear;
+    border-radius: 6px;
+}
+
+header article nav .search input {
+    width: 90%;
+    position: relative;
+    padding: 0px 10px;
+    font-size: 14px;
+    color: #1af31a;
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: .5s linear;
+}
+
+header article nav .search input::placeholder {
+    color: #1af31a;
+    font-size: 14px;
+    transition: .5s linear;
+}
+
+header article nav .search i {
+    color: #1af31a;
+    font-size: 14px;
+    font-weight: 600;
+    transition: .5s linear;
+}
+
+header article nav .right-box {
+    width: 38%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header article nav .right-box .right_text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1af31a;
+    transition: .5s linear;
+}
+
+header article nav .right-box button {
+    font-size: 14px;
+    color: #0e1b10;
+    transition: .5s linear;
+}
+
+header article nav .right-box .user_data {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s linear;
+}
+
+header article nav .right-box .user_data h5 {
+    width: 120px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1af31a;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header article nav .right-box .user_data h4 {
+    background: #1af31a;
+    color: #0e1b10;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+header article nav .right-box .user_data i {
+    color: #1af31a;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 0px 4px;
+    transition: .7s linear;
+}
+
+header article nav .right-box .user_data i:hover {
+    transform: rotate(180deg);
+}
+
+header article nav .right-box .user_data .card {
+    position: absolute;
+    width: 180px;
+    height: 0px;
+    /* background: #0e1b10; */
+    border-radius: 6px;
+    /* box-shadow: rgba(33, 247, 33, 0.7); */
+    top: 55px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+header article nav .right-box .user_data:hover .card {
+    height: 250px;
+    opacity: 1;
+    overflow: unset;
+}
+
+header article nav .right-box .user_data .card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 197, 33, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+header article nav .right-box .user_data .card::after {
+    content: '';
+    position: absolute;
+    border-top: 15px solid rgba(32, 218, 8, 0.1);
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    top: -10px;
+    right: 20px;
+    transform: rotate(45deg);
+}
+
+header article nav .right-box .user_data .card img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+header article nav .right-box .user_data .card h5 {
+    color: #1af31a;
+    width: unset;
+    overflow: unset;
+    display: block;
+    padding-top: 6px;
+    transition: .5s linear;
+}
+
+header article nav .right-box .user_data .card p {
+    font-size: 12px;
+    color: #012507;
+    font-weight: 700;
+    margin-bottom: 10px;
+    transition: .5s linear;
+}
+
+header article nav .right-box .user_data .card .gameImg {
+    width: 160px;
+    height: 80px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+/*------- game box style start ------*/
+header article .imgbox1 {
+    position: relative;
+    width: 100%;
+    color: #1af31a;
+    height: 200px;
+    padding: 0px 30px;
+    margin-top: 20px;
+}
+
+header article .imgbox1 h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+
+header article .imgbox1 .main_imgbox {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox {
+    min-width: 230px;
+    height: 160px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox:nth-last-child(1) {
+    margin-right: 0px;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox img {
+    width: 100%;
+    height: 75%;
+    border-radius: 5px;
+}
+
+
+header article .imgbox1 .main_imgbox .single_imgbox .views_content {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5px;
+    transition: .5s linear;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox .views_content h4 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox .views_content h6 {
+    font-size: 10px;
+    font-weight: 500;
+    color: #013309;
+}
+
+header article .imgbox1 .main_imgbox .single_imgbox .views_content p {
+    font-size: 12px;
+    font-weight: 500;
+    color: #013309;
+    margin-top: -4px;
+}
+
+header article .imgbox1 .btns {
+    position: absolute;
+    right: 3%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    transition: .5s linear;
+}
+
+header article .imgbox1 .btns i {
+    margin-left: 5px;
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+header article .imgbox1 .btns i:hover {
+    color: #013504;
+}
+
+/* 2nd img box css style */
+header article .imgbox2 {
+    position: relative;
+    width: 100%;
+    color: #1af31a;
+    padding: 0px 26px;
+    margin-top: 10px;
+}
+
+header article .imgbox2 .img_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header article .imgbox2 .img_content button {
+    background: #1af31a;
+    margin-top: 12px;
+    color: #012507;
+    padding: 8px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    transition: .5s linear;
+}
+
+header article .imgbox2 .img_content button:hover {
+    opacity: .6;
+}
+
+header article .imgbox2 .game_allbox .single-allbox {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+
+header article .imgbox2 .game_allbox .single-allbox::-webkit-scrollbar {
+    width: 5px;
+    background: #555756;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+header article .imgbox2 .game_allbox .single-allbox::-webkit-scrollbar-thumb {
+    background: #012507;
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+header article .imgbox2 .game_allbox .single-allbox:hover::-webkit-scrollbar {
+    visibility: visible;
+}
+
+header article .imgbox2 .game_allbox .single-allbox:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+header article .imgbox2 .game_allbox .single-allbox .single-box {
+    width: 100px;
+    height: 166px;
+    margin: 0px 5px 11px 0px;
+}
+
+header article .imgbox2 .game_allbox .single-allbox .single-box img {
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+header article .imgbox2 .game_allbox .single-allbox .single-box .single-content {
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+}
+
+header article .imgbox2 .game_allbox .single-allbox .single-box .single-content h6 {
+    width: 100%;
+    color: #1af31a;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .5s linear;
+}
+
+header article .imgbox2 .game_allbox .single-allbox .single-box .single-content p {
+    width: 100%;
+    font-size: 10px;
+    font-weight: 500;
+    color: #012507;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .5s linear;
+}
